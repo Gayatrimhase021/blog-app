@@ -28,6 +28,10 @@ app.get("/", (req, res) => {
          message: "Welcome to the server!" });
 });
 
+app.get("/api", (req, res) => {
+    res.json({message: "API is working!"});
+});
+
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
