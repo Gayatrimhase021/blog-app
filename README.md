@@ -1,3 +1,3 @@
 [#BlogNest ⭐](https://blog-app-qnxa.onrender.com/) 
 
-This is hobby project to understand how blog 
+A hobby project created to understand how a blog application works.
