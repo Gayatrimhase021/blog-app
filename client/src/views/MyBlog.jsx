@@ -1,4 +1,4 @@
-import MyBlog from './MyBlog';
+
 function MyBlog() {
   return (
     <div>

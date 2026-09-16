@@ -1,4 +1,4 @@
-import AllBlogs from './AllBlogs';
+
 function AllBlogs() {
   return (
     <div>
