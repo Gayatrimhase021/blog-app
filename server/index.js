@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import User from "./models/User.js";
+import { postLogin, postSignup } from "./controllers/user.js";
 
 dotenv.config();
 
@@ -92,9 +93,13 @@ app.post("/api/login", async (req, res) => {
   }
 });
 
+app.post("/signup", postSignup);
+app.post("/login", postLogin);
+
 const PORT = process.env.PORT || 8080;
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
   connectDB();
 });
+
