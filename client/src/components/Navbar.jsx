@@ -1,50 +1,51 @@
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
 
   const token = localStorage.getItem("token");
 
-  const logout = () => {
-    localStorage.removeItem("token");
-    localStorage.removeItem("loggedInUser");
-
-    window.location.href = "/login";
-  };
-
   return (
     <nav className="navbar">
 
-      <div className="navbar-logo">
-        <Link to="/">
-          BlogNest
-        </Link>
-      </div>
+      <div className="navbar-container">
 
-      <div className="navbar-links">
-
-        <Link to="/">
-          All Blogs
+        {/* Logo */}
+        <Link to="/" className="navbar-logo">
+          <span className="logo-icon">B</span>
+          <span>BlogNest</span>
         </Link>
 
-        <Link to="/new">
-          New Blog
-        </Link>
 
-        {!token ? (
-          <>
-            <Link to="/login">
+        {/* Navigation */}
+        <div className="navbar-links">
+
+          <Link to="/" className="nav-link">
+            All Blogs
+          </Link>
+
+          <Link to="/new" className="nav-link create-link">
+            + Create Blog
+          </Link>
+
+          {token ? (
+            <button
+              className="nav-logout"
+              onClick={() => {
+                localStorage.removeItem("token");
+                localStorage.removeItem("loggedInUser");
+                window.location.href = "/login";
+              }}
+            >
+              Logout
+            </button>
+          ) : (
+            <Link to="/login" className="nav-login">
               Login
             </Link>
+          )}
 
-            <Link to="/signup">
-              Signup
-            </Link>
-          </>
-        ) : (
-          <button onClick={logout}>
-            Logout
-          </button>
-        )}
+        </div>
 
       </div>
 

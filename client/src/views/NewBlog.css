@@ -1,0 +1,435 @@
+/* ================================= */
+/* NEW BLOG PAGE */
+/* ================================= */
+
+.new-blog-page {
+  min-height: calc(100vh - 72px);
+  background: #f5f7fa;
+
+  padding: 45px 30px;
+}
+
+
+/* ================================= */
+/* MAIN CONTAINER */
+/* ================================= */
+
+.new-blog-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+/* ================================= */
+/* HEADER */
+/* ================================= */
+
+.new-blog-header {
+  margin-bottom: 30px;
+}
+
+.new-blog-header h1 {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 34px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+.new-blog-header p {
+  margin-top: 8px;
+
+  color: #6b7280;
+
+  font-size: 15px;
+}
+
+
+/* ================================= */
+/* FORM CARD */
+/* ================================= */
+
+.new-blog-form {
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  padding: 35px;
+
+  box-shadow: 0 5px 20px rgba(17, 24, 39, 0.05);
+}
+
+
+/* ================================= */
+/* FORM GROUP */
+/* ================================= */
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #374151;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* ================================= */
+/* INPUTS */
+/* ================================= */
+
+.form-group input,
+.form-group select {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  color: #111827;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #111827;
+
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+
+/* ================================= */
+/* TWO COLUMN FORM */
+/* ================================= */
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+
+/* ================================= */
+/* EDITOR */
+/* ================================= */
+
+.editor {
+  width: 100%;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+}
+
+
+/* ================================= */
+/* EDITOR TOOLBAR */
+/* ================================= */
+
+.editor-toolbar {
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 9px 12px;
+
+  background: #f8fafc;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.editor-toolbar button {
+  min-width: 36px;
+
+  padding: 7px 11px;
+
+  background: #ffffff;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 6px;
+
+  color: #374151;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.editor-toolbar button:hover {
+  background: #111827;
+  color: #ffffff;
+
+  border-color: #111827;
+}
+
+.editor-toolbar span {
+  margin-left: auto;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* ================================= */
+/* BLOG EDITOR */
+/* ================================= */
+
+.blog-editor {
+  width: 100%;
+
+  min-height: 480px;
+
+  padding: 22px;
+
+  border: none;
+
+  outline: none;
+
+  resize: vertical;
+
+  background: #ffffff;
+
+  color: #1f2937;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+.blog-editor::placeholder {
+  color: #9ca3af;
+}
+
+
+/* ================================= */
+/* EDITOR FOOTER */
+/* ================================= */
+
+.editor-footer {
+  padding: 8px 15px;
+
+  border-top: 1px solid #eeeeee;
+
+  text-align: right;
+
+  background: #fafafa;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* ================================= */
+/* STATUS */
+/* ================================= */
+
+.status-buttons {
+  display: flex;
+
+  gap: 12px;
+}
+
+.status-button {
+  padding: 11px 24px;
+
+  background: #ffffff;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  color: #374151;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.status-button:hover {
+  border-color: #111827;
+}
+
+.status-button.selected {
+  background: #111827;
+
+  border-color: #111827;
+
+  color: #ffffff;
+}
+
+
+/* ================================= */
+/* ACTION BUTTONS */
+/* ================================= */
+
+.new-blog-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+
+  padding-top: 25px;
+
+  margin-top: 10px;
+
+  border-top: 1px solid #eeeeee;
+}
+
+
+/* ================================= */
+/* CANCEL */
+/* ================================= */
+
+.cancel-button {
+  padding: 12px 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  color: #374151;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.cancel-button:hover {
+  background: #f3f4f6;
+}
+
+
+/* ================================= */
+/* CREATE / PUBLISH */
+/* ================================= */
+
+.create-button {
+  padding: 12px 27px;
+
+  background: #111827;
+
+  border: 1px solid #111827;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.create-button:hover {
+  background: #374151;
+
+  border-color: #374151;
+}
+
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media (max-width: 700px) {
+
+  .new-blog-page {
+    padding: 25px 15px;
+  }
+
+  .new-blog-header h1 {
+    font-size: 28px;
+  }
+
+  .new-blog-form {
+    padding: 22px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .blog-editor {
+    min-height: 350px;
+    padding: 16px;
+  }
+
+  .editor-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .editor-toolbar span {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .status-buttons {
+    width: 100%;
+  }
+
+  .status-button {
+    flex: 1;
+  }
+
+  .new-blog-actions {
+    flex-direction: column;
+  }
+
+  .cancel-button,
+  .create-button {
+    width: 100%;
+  }
+}

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "../components/Card";
+import "./AllBlogs.css";
 
 function AllBlogs() {
 

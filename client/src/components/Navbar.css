@@ -1,0 +1,204 @@
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+.navbar {
+  width: 100%;
+  height: 72px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1400px;
+  height: 72px;
+  margin: 0 auto;
+
+  padding: 0 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ============================= */
+/* LOGO */
+/* ============================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  text-decoration: none;
+  color: #111827;
+
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #111827;
+  color: #ffffff;
+
+  border-radius: 10px;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+
+/* ============================= */
+/* NAVIGATION LINKS */
+/* ============================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-link {
+  text-decoration: none;
+
+  color: #4b5563;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  padding: 10px 15px;
+
+  border-radius: 8px;
+
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+
+/* ============================= */
+/* CREATE BLOG */
+/* ============================= */
+
+.create-link {
+  background: #111827;
+  color: #ffffff;
+}
+
+.create-link:hover {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+
+/* ============================= */
+/* LOGIN */
+/* ============================= */
+
+.nav-login {
+  text-decoration: none;
+
+  padding: 10px 20px;
+
+  border: 1px solid #111827;
+  border-radius: 8px;
+
+  color: #111827;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.2s ease;
+}
+
+.nav-login:hover {
+  background: #111827;
+  color: #ffffff;
+}
+
+
+/* ============================= */
+/* LOGOUT */
+/* ============================= */
+
+.nav-logout {
+  border: none;
+
+  padding: 10px 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 8px;
+
+  color: #374151;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.nav-logout:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 700px) {
+
+  .navbar {
+    height: auto;
+  }
+
+  .navbar-container {
+    height: auto;
+
+    padding: 15px 20px;
+
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar-links {
+    width: 100%;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .navbar-logo {
+    font-size: 21px;
+  }
+
+  .nav-link,
+  .nav-login,
+  .nav-logout {
+    font-size: 14px;
+    padding: 8px 13px;
+  }
+}
