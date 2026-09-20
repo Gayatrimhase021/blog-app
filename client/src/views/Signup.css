@@ -1,0 +1,127 @@
+.signup-page {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: #f5f7fa;
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.signup-container h1 {
+  margin: 0 0 28px;
+  text-align: center;
+  font-size: 30px;
+  color: #1f2937;
+}
+
+.signup-container input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  color: #1f2937;
+  background: #ffffff;
+  transition: 0.2s ease;
+}
+
+.signup-container input:focus {
+  border-color: #374151;
+  box-shadow: 0 0 0 3px rgba(55, 65, 81, 0.1);
+}
+
+.signup-container input::placeholder {
+  color: #9ca3af;
+}
+
+/* Signup Button */
+.signup-container > button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #374151;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.signup-container > button:hover {
+  background: #1f2937;
+}
+
+.signup-container p {
+  margin: 22px 0 0;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.signup-container a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-container a:hover {
+  text-decoration: underline;
+}
+
+/* Password Field */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 45px;
+  box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+.password-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #555;
+  font-size: 20px;
+}
+
+.password-icon:hover {
+  color: #222;
+}
+
+@media (max-width: 480px) {
+  .signup-page {
+    padding: 25px 15px;
+  }
+
+  .signup-container {
+    padding: 25px 20px;
+  }
+
+  .signup-container h1 {
+    font-size: 26px;
+  }
+}

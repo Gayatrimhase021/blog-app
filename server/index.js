@@ -64,6 +64,8 @@ app.post("/api/signup", async (req, res) => {
     });
 
   } catch (error) {
+    console.log(error);
+
     res.status(500).json({
       success: false,
       message: "Signup failed",
@@ -90,7 +92,6 @@ app.post("/api/login", async (req, res) => {
       });
     }
 
-    // MD5 password check
     if (user.password !== md5(password)) {
       return res.status(401).json({
         success: false,
@@ -98,7 +99,6 @@ app.post("/api/login", async (req, res) => {
       });
     }
 
-    // JWT Token
     const token = jwt.sign(
       {
         userId: user._id,
@@ -113,9 +113,7 @@ app.post("/api/login", async (req, res) => {
     res.status(200).json({
       success: true,
       message: "Login successful",
-
       token: token,
-
       user: {
         id: user._id,
         name: user.name || user.username,
@@ -124,6 +122,8 @@ app.post("/api/login", async (req, res) => {
     });
 
   } catch (error) {
+    console.log(error);
+
     res.status(500).json({
       success: false,
       message: "Login failed",
@@ -136,13 +136,9 @@ app.post("/signup", postSignup);
 app.post("/login", postLogin);
 
 // Blog APIs
-
 app.get("/api/blog", getAllBlogs);
-
 app.get("/api/blog/:slug", getBlogBySlug);
-
 app.post("/api/blog", postBlog);
-
 app.patch("/api/blog/:slug", patchBlog);
 
 const PORT = process.env.PORT || 8080;
