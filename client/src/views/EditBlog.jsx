@@ -4,6 +4,7 @@ import {
   useNavigate,
   useParams
 } from "react-router-dom";
+import "./EditBlog.css";
 
 function EditBlog() {
 
