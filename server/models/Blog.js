@@ -7,6 +7,12 @@ const blogSchema = new Schema(
       required: true
     },
 
+    slug: {
+      type: String,
+      required: true,
+      unique: true
+    },
+
     content: {
       type: String,
       required: true
