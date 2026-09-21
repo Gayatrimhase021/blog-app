@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
+import "./ReadBlog.css";
 
 function ReadBlog() {
 
@@ -8,38 +9,38 @@ function ReadBlog() {
 
   const [blog, setBlog] = useState(null);
 
-
   const getBlog = async () => {
-
     try {
 
       const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/blog/slug/${slug}`
+        `${import.meta.env.VITE_API_URL}/api/blog/${slug}`
       );
+
+      console.log("Read Blog Response:", response.data);
 
       if (response.data.success) {
         setBlog(response.data.blog);
       }
 
     } catch (error) {
-      console.log(error);
+
+      console.log(
+        "Read Blog Error:",
+        error.response?.data || error.message
+      );
+
     }
-
   };
-
 
   useEffect(() => {
     getBlog();
   }, [slug]);
 
-
   if (!blog) {
     return <p>Loading...</p>;
   }
 
-
   return (
-
     <div className="read-blog">
 
       <h1>{blog.title}</h1>
@@ -49,19 +50,17 @@ function ReadBlog() {
       </p>
 
       <p>
-        Written by: {blog.authorName}
+        Written by: {blog.author?.name || "Unknown"}
       </p>
 
       <p>
-        Email: {blog.authorEmail}
+        Email: {blog.author?.email || "Not available"}
       </p>
 
       <p>
         Published:{" "}
         {blog.publishedAt
-          ? new Date(
-              blog.publishedAt
-            ).toLocaleString()
+          ? new Date(blog.publishedAt).toLocaleString()
           : "Not published"}
       </p>
 
@@ -78,7 +77,6 @@ function ReadBlog() {
       </Link>
 
     </div>
-
   );
 }
 
